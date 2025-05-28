@@ -38,34 +38,45 @@ var __setFunctionName = (this && this.__setFunctionName) || function (f, name, p
     return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppComponent = void 0;
+exports.CounterComponent = void 0;
 const core_1 = require("@angular/core");
-const forms_1 = require("@angular/forms");
-let AppComponent = (() => {
+const common_1 = require("@angular/common");
+let CounterComponent = (() => {
     let _classDecorators = [(0, core_1.Component)({
-            selector: 'app-root',
-            imports: [forms_1.FormsModule],
-            templateUrl: './app.component.html',
-            styleUrl: './app.component.scss'
+            selector: 'app-counter',
+            imports: [common_1.CommonModule],
+            templateUrl: './counter.component.html',
+            styleUrl: './counter.component.scss'
         })];
     let _classDescriptor;
     let _classExtraInitializers = [];
     let _classThis;
-    var AppComponent = _classThis = class {
+    var CounterComponent = _classThis = class {
         constructor() {
-            this.name = "tareq";
-            this.age = 25;
-            this.description = "i'm a developer";
+            this.counter = 0;
+        }
+        increment() {
+            this.counter++;
+        }
+        decrement() {
+            this.counter--;
+        }
+        getStatusNumber() {
+            if (this.counter > 0)
+                return 'positive';
+            if (this.counter < 0)
+                return 'negative';
+            return 'zero';
         }
     };
-    __setFunctionName(_classThis, "AppComponent");
+    __setFunctionName(_classThis, "CounterComponent");
     (() => {
         const _metadata = typeof Symbol === "function" && Symbol.metadata ? Object.create(null) : void 0;
         __esDecorate(null, _classDescriptor = { value: _classThis }, _classDecorators, { kind: "class", name: _classThis.name, metadata: _metadata }, null, _classExtraInitializers);
-        AppComponent = _classThis = _classDescriptor.value;
+        CounterComponent = _classThis = _classDescriptor.value;
         if (_metadata) Object.defineProperty(_classThis, Symbol.metadata, { enumerable: true, configurable: true, writable: true, value: _metadata });
         __runInitializers(_classThis, _classExtraInitializers);
     })();
-    return AppComponent = _classThis;
+    return CounterComponent = _classThis;
 })();
-exports.AppComponent = AppComponent;
+exports.CounterComponent = CounterComponent;

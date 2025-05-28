@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ang-pro": {
+    "counter-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ang-pro",
+            "outputPath": "dist/counter-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ang-pro:build:production"
+              "buildTarget": "counter-app:build:production"
             },
             "development": {
-              "buildTarget": "ang-pro:build:development"
+              "buildTarget": "counter-app:build:development"
             }
           },
           "defaultConfiguration": "development"
