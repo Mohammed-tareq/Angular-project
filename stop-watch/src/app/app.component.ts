@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { CounterComponent } from './counter/counter.component';
+import {StopWatchComponent} from './stop-watch/stop-watch.component';
+
 @Component({
   selector: 'app-root',
-  imports: [CounterComponent],
+  imports: [StopWatchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'counter-app';
+  title = 'stop-watch';
 }
