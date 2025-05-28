@@ -1,0 +1,14 @@
+<div class="stopWatch-container">
+  <h2>Stop Watch</h2>
+  <p class="time">{{startTime | number : "1.1-1"}}
+    second
+  </p>
+
+  <div class="controls">
+    <button (click)="startStop()">
+      {{running? 'Stop' : 'Start'}}
+    </button>
+
+    <button (click)="reset()" [disabled]="!startTime" >Reset</button>
+  </div>
+</div>
