@@ -33,4 +33,6 @@ export class StopWatchComponent {
     this.stop();
     this.startTime = 0;
   }
+
+  
 }
